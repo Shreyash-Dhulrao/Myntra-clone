@@ -612,7 +612,7 @@ const Navbar = (props) => {
                         {/* <img src={search} alt="" className='absolute w-4 mx-4 ' /> */}
                         <input type="text" name="Searchbar" id="searchicon1" placeholder='Search for products, brands and more' className={`ps-5 top-20 mt-3 py-3 w-1/2 right-0 absolute bg-${props.Light1} text-${props.Text} rounded-md font-extralight outline-none border-1 font-navbar tracking-wider text-sm`} />
                     </div>
-                    <div className="profile  items-center ms-8 flex gap-6">
+                    <div className="profile  items-center ms-8 flex gap-4">
                         <a href="/" className={`font-medium text-${props.Text}  items-center flex flex-col text-sm font-navbar tracking-wide`}>
                             <Profile className={`text-${props.Text} w-6 h-auto`} />
                             Profile

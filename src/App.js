@@ -2,6 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import Navbar from './Components/Frontend/Navbar'
 import Main from './Components/Frontend/Main'
+import Flat from './Components/Frontend/Flat'
 
 function App() {
   const [Light, setLight] = useState('zinc-50')
@@ -26,6 +27,7 @@ function App() {
     <div className="App">
       <Navbar toggleButton={toggleButton} Background={Light} Text={Text} Text1={TextD} Light1={Light1} />
       <Main />
+      <Flat />
     </div>
   );
 }
