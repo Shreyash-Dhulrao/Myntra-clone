@@ -48,9 +48,9 @@ const Navbar = (props) => {
                 <div className="start flex items-center xl:w-1/2 md:w-4/5 lg:w-3/5 hidden md:inline-flex ">
                     <a href="/" ><img src={icon} alt="" className='w-12 lg:mx-14 md:mx-8 md:w-9' /></a>
                     <div className='flex mt-1'>
-                        <a href="/" className={`text-${props.Text} border-b-4 hover:border-red-500 border-transparent py-7 px-2.5 font-navbar lg:text-sm text-xs tracking-widest  transition delay-300 ease-in-out `} onMouseEnter={() => handleHover('Men', true)} onMouseLeave={() => handleHover('Men', false)}>MEN</a>
+                        <a href="/" className={`text-${props.Text} border-b-4 hover:border-red-500 border-transparent py-7 px-2.5 font-navbar lg:text-sm text-xs tracking-widest  transition duration-500 ease-in-out `} onMouseEnter={() => handleHover('Men', true)} onMouseLeave={() => handleHover('Men', false)}>MEN</a>
                         {hoverState.Men && (
-                            <div className={`absolute top-20 mt-1 backdrop-blur-lg rounded-b-2xl bg-${props.Background}/70 flex bg-zinc-200 w-5/6`} onMouseEnter={() => handleHover('Men', true)} onMouseLeave={() => handleHover('Men', false)}>
+                            <div className={`absolute top-20 mt-1 backdrop-blur-lg transition duration-500  rounded-b-2xl bg-${props.Background}/70 flex bg-zinc-200 w-5/6`} onMouseEnter={() => handleHover('Men', true)} onMouseLeave={() => handleHover('Men', false)}>
                                 <div className="container1 flex flex-col p-4 px-10">
                                     <div className={`flex flex-col gap-1 border-b-2 border-${props.Text}  pb-5`}>
                                         <a href='/' className='text-red-500 text-sm font-bold'>Top Wear</a>
@@ -155,7 +155,7 @@ const Navbar = (props) => {
                                 </div>
                             </div>
                         )}
-                        <a href="/" className={`text-${props.Text} border-b-4 hover:border-red-500 border-transparent py-7  lg:px-2.5 p-1.5 font-navbar lg:text-sm text-xs  font-medium tracking-widest transition delay-300 ease-in-out`} onMouseEnter={() => handleHover('Women', true)} onMouseLeave={() => handleHover('Women', false)}>WOMEN</a>
+                        <a href="/" className={`text-${props.Text} border-b-4 hover:border-red-500 border-transparent py-7  lg:px-2.5 p-1.5 font-navbar lg:text-sm text-xs  font-medium tracking-widest transition duration-500 ease-in-out`} onMouseEnter={() => handleHover('Women', true)} onMouseLeave={() => handleHover('Women', false)}>WOMEN</a>
                         {hoverState.Women && (
                             <div className={`absolute  top-20 mt-1 transition backdrop-blur-lg rounded-b-2xl bg-${props.Background}/70 flex bg-zinc-200 ease-in-out block w-5/6`} onMouseEnter={() => handleHover('Women', true)} onMouseLeave={() => handleHover('Women', false)}>
                                 <div className="container1 flex flex-col p-4 px-10 ">
@@ -266,7 +266,7 @@ const Navbar = (props) => {
                                 </div>
                             </div>
                         )}
-                        <a href="/" className={`text-${props.Text} border-b-4 hover:border-pink-500 border-transparent py-7  lg:px-2.5 p-1.5 font-navbar lg:text-sm text-xs  font-medium tracking-widest transition delay-300 ease-in-out`} onMouseEnter={() => handleHover('Kids', true)} onMouseLeave={() => handleHover('Kids', false)}>KIDS</a>
+                        <a href="/" className={`text-${props.Text} border-b-4 hover:border-pink-500 border-transparent py-7  lg:px-2.5 p-1.5 font-navbar lg:text-sm text-xs  font-medium tracking-widest transition duration-500 ease-in-out`} onMouseEnter={() => handleHover('Kids', true)} onMouseLeave={() => handleHover('Kids', false)}>KIDS</a>
                         {hoverState.Kids && (
                             <div className={`absolute  top-20 mt-1 transition backdrop-blur-lg rounded-b-2xl bg-${props.Background}/70 flex bg-zinc-200 ease-in-out block w-5/6`} onMouseEnter={() => handleHover('Kids', true)} onMouseLeave={() => handleHover('Kids', false)}>
                                 <div className="container1 flex flex-col p-4 px-10 ">
@@ -369,7 +369,7 @@ const Navbar = (props) => {
                                 </div>
                             </div>
                         )}
-                        <a href="/" className={`text-${props.Text} border-b-4 hover:border-yellow-500 border-transparent py-7 px-2.5 md:text-center font-navbar lg:text-sm text-xs  font-medium tracking-widest transition delay-300 ease-in-out`} onMouseEnter={() => handleHover('Home', true)} onMouseLeave={() => handleHover('Home', false)}>HOME & LIVING</a>
+                        <a href="/" className={`text-${props.Text} border-b-4 hover:border-yellow-500 border-transparent py-7 px-2.5 md:text-center font-navbar lg:text-sm text-xs  font-medium tracking-widest transition duration-500 ease-in-out`} onMouseEnter={() => handleHover('Home', true)} onMouseLeave={() => handleHover('Home', false)}>HOME & LIVING</a>
                         {hoverState.Home && (
                             <div className={`absolute  top-20 mt-1 transition backdrop-blur-lg rounded-b-2xl bg-${props.Background}/70 flex bg-zinc-200 ease-in-out block w-5/6`} onMouseEnter={() => handleHover('Home', true)} onMouseLeave={() => handleHover('Home', false)}>
                                 <div className="container1 flex flex-col p-4 px-10 ">
@@ -481,7 +481,7 @@ const Navbar = (props) => {
                                     </div>
                                 </div>
                             </div>)}
-                        <a href="/" className={`text-${props.Text} border-b-4 hover:border-green-400 border-transparent py-7  lg:px-2.5 p-1.5 font-navbar lg:text-sm text-xs  font-medium tracking-widest transition delay-300 ease-in-out`} onMouseEnter={() => handleHover('Beauty', true)} onMouseLeave={() => handleHover('Beauty', false)}>BEAUTY</a>
+                        <a href="/" className={`text-${props.Text} border-b-4 hover:border-green-400 border-transparent py-7  lg:px-2.5 p-1.5 font-navbar lg:text-sm text-xs  font-medium tracking-widest transition duration-500 ease-in-out`} onMouseEnter={() => handleHover('Beauty', true)} onMouseLeave={() => handleHover('Beauty', false)}>BEAUTY</a>
                         {hoverState.Beauty && (
                             <div className={`absolute  top-20 mt-1 transition backdrop-blur-lg rounded-b-2xl bg-${props.Background}/70 flex bg-zinc-200 ease-in-out block w-5/6`} onMouseEnter={() => handleHover('Beauty', true)} onMouseLeave={() => handleHover('Beauty', false)}>
                                 <div className="container1 flex flex-col p-4 px-10 ">
@@ -588,7 +588,7 @@ const Navbar = (props) => {
                                     </div>
                                 </div>
                             </div>)}
-                        <a href="/" className={`text-${props.Text} border-b-4 relative hover:border-red-500 border-transparent py-7  lg:px-2.5 p-1.5 font-navbar lg:text-sm text-xs font-medium tracking-widest transition delay-300 ease-in-out`} onMouseEnter={() => handleHover('Studio', true)} onMouseLeave={() => handleHover('Studio', false)}>STUDIO <sup className='text-red-400'>NEW</sup></a>
+                        <a href="/" className={`text-${props.Text} border-b-4 relative hover:border-red-500 border-transparent py-7  lg:px-2.5 p-1.5 font-navbar lg:text-sm text-xs font-medium tracking-widest transition duration-500 ease-in-out`} onMouseEnter={() => handleHover('Studio', true)} onMouseLeave={() => handleHover('Studio', false)}>STUDIO <sup className='text-red-400'>NEW</sup></a>
                         {hoverState.Studio && (
                             <div className={`absolute ms-48 backdrop-blur-lg top-20 mt-1 text-${props.Text} rounded-b-2xl bg-${props.Background}/70 w-2/6 h-3/5 flex ease-in-out`} onMouseEnter={() => handleHover('Studio', true)} onMouseLeave={() => handleHover('Studio', false)}>
                                 <div >

@@ -15,7 +15,7 @@ const SideTray = () => {
 
     return (
         <div>
-            <div className="fixed top-4 right-4">
+            <div className="fixed top-4 right-4 hidden lg:inline-flex">
                 <div
                     className={`bg-gradient-to-r from-purple-200 via-white to-white  text-black transition-transform px-5 pt-5 mt-10 me-14 fixed bottom-36 right-0 duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'
                         }`}
