@@ -9,15 +9,10 @@ import { ReactComponent as Bag } from '../Images/Icons/bag-5-svgrepo-com.svg'
 import { ReactComponent as Night } from '../Images/Icons/moon-stars-svgrepo-com.svg'
 import { ReactComponent as Day } from '../Images/Icons/sun-svgrepo-com.svg'
 import { ReactComponent as Search } from '../Images/Icons/search-svgrepo-com.svg'
-import { ReactComponent as Search1 } from '../Images/Icons/search-normal-1-svgrepo-com.svg'
 import { ReactComponent as Studio } from '../Images/Icons/myntra-studio-seeklogo.svg'
 import { ReactComponent as Arrow } from '../Images/Icons/arrow-right-svgrepo-com.svg'
-import { ReactComponent as Close } from '../Images/Icons/close-bold-svgrepo-com.svg'
-
-
 
 const Navbar = (props) => {
-    const [isClicked, setisClicked] = useState(false)
     const [hoverState, setHoverState] = useState({
         Men: false,
         Women: false,
@@ -26,21 +21,14 @@ const Navbar = (props) => {
         Beauty: false,
         Studio: false
     });
-
-    const togglebtn = () => {
-        if (isClicked === false) {
-            setisClicked(true)
-        }
-        else {
-            setisClicked(false)
-        }
-    }
+    
     const handleHover = (category, state) => {
         setHoverState(prevState => ({
             ...prevState,
             [category]: state
         }));
     }
+
 
     return (
         <>
@@ -633,53 +621,10 @@ const Navbar = (props) => {
 
                     </div>
                 </div>
-                <div className='w-full h-10 items-center block md:hidden flex justify-evenly  '>
-                    <div className="items-center justify-start">
-                    <a href="/" ><img src={icon} alt="" className='w-6 mx-5' /></a>
-                    </div>
-                    <div className="input  items-center flex w-1/2 gap-2 w-auto">
-                        {/* <img src={search} alt="" className='absolute w-4 mx-4 ' /> */}
-                        <Search className={`absolute text-${props.Text} w-5 mx-4 `} for='searchbar' />
-                        <input type="text" name="Searchbar" id="searchbar" placeholder='Search' className={`ps-14 py-3 w-full bg-${props.Light1} text-${props.Text} rounded-md font-extralight outline-none border-1 font-navbar tracking-wider text-sm`} />
-                    </div>
-                    <button className={`flex p-2 rounded-3xl delay-200 transition`} onClick={props.toggleButton}>
-                            {props.Background === 'zinc-50' ? <Night className={`w-5 text-${props.Text} h-auto `} /> : <Day className={`w-5 text-${props.Text} h-auto`} />}
-                        </button>
-                        <button onClick={togglebtn} className='block md:hidden mx-4'> {
-                            !isClicked ? <Close alt="/" className={`text-${props.Text} w-5 h-auto transition rotate-45`} /> : <Close alt="/" className={`text-${props.Text} w-5 h-auto transition`} />} </button>
-                        </div>
-
-                    {
-                        isClicked && (
-                            <div className={`absolute md:hidden inline-flex  top-9 mt-0.5  right-0   transition rounded-b-2xl flex bg-zinc-900/10 ease-in-out block w-full h-full`} >
-                                <div className={`flex flex-col p-2 items-end right-0 absolute h-full backdrop-blur-lg bg-${props.Background}/70`}>
-                                    <a href="/" className={`text-${props.Text} relative py-2 px-2.5 font-navbar text-sm font-medium tracking-widest`} onMouseEnter={() => handleHover('Studio', true)} onMouseLeave={() => handleHover('Studio', false)}>MEN</a>
-                                    <a href="/" className={`text-${props.Text} relative py-2 px-2.5 font-navbar text-sm font-medium tracking-widest`} onMouseEnter={() => handleHover('Studio', true)} onMouseLeave={() => handleHover('Studio', false)}>WOMEN</a>
-                                    <a href="/" className={`text-${props.Text} relative py-2 px-2.5 font-navbar text-sm font-medium tracking-widest`} onMouseEnter={() => handleHover('Studio', true)} onMouseLeave={() => handleHover('Studio', false)}>KIDS</a>
-                                    <a href="/" className={`text-${props.Text} relative py-2 px-2.5 font-navbar text-sm font-medium tracking-widest`} onMouseEnter={() => handleHover('Studio', true)} onMouseLeave={() => handleHover('Studio', false)}>HOME & FURNITURES</a>
-                                    <a href="/" className={`text-${props.Text} relative py-2 px-2.5 font-navbar text-sm font-medium tracking-widest`} onMouseEnter={() => handleHover('Studio', true)} onMouseLeave={() => handleHover('Studio', false)}>BEAUTY</a>
-                                    <a href="/" className={`text-${props.Text} relative py-2 px-2.5 font-navbar text-sm font-medium tracking-widest`} onMouseEnter={() => handleHover('Studio', true)} onMouseLeave={() => handleHover('Studio', false)}>STUDIO <sup className='text-red-400'>NEW</sup></a>
-
-                                </div>
-                                <div className={`flex flex-col p-2 items-start  gap-3 right-20 bottom-14 absolute`}>
-                    
-                        <a href="/" className={`text-${props.Text} relative py-2 px-2.5 font-navbar flex text-sm font-medium tracking-widest`}>
-                            <Profile className={`text-${props.Text} w-5 h-auto`} /> Profile
-                        </a>
-                        <a href="/" className={`text-${props.Text} relative py-2 px-2.5 font-navbar flex text-sm font-medium tracking-widest`}>
-                            <Heart alt="/" className={`text-${props.Text} w-5 h-auto`} /> Wishlist
-                        </a>
-                        <a href="/" className={`text-${props.Text} relative py-2 px-2.5 font-navbar flex text-sm font-medium tracking-widest`}>
-                            <Bag alt="/" className={`text-${props.Text} w-5 h-auto`} /> Cart
-                        </a>
-                        
-</div>
-                            </div>
-                        )
-                    }
-                </div >
-            </>
-            )
+                
+            </div >
+        </>
+    )
 }
 
-            export default Navbar
+export default Navbar

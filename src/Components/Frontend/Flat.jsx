@@ -67,7 +67,6 @@ const SideTray = () => {
 
                     }}
                 >
-
                     FLAT ₹500 OFF {isOpen ? <img src={arrowup} alt='' width='30px' className='ms-10 transition ease-in-out rotate-180 duration-500' /> : <img src={arrowup} alt='' width='30px' className='ms-10 transition  duration-500' />}
                 </button>
             </div>
