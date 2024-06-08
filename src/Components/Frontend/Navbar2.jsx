@@ -54,7 +54,7 @@ const Navbar2 = (props) => {
                 <button onClick={togglebtn} className='block md:hidden'> {
                     <Close alt="/" className={`text-${props.Text} w-5 h-auto transition`} />} </button>
                 <div className="items-center justify-start">
-                    <a href="/" className={`text-${props.Text}`}>Myntra</a>
+                    <a href="/" className={`text-${props.Text} font-title `}>Myntra</a>
                 </div>
                 <div className="input  items-center flex w-1/2 gap-2 w-auto">
                     {/* <img src={search} alt="" className='absolute w-4 mx-4 ' /> */}
@@ -71,11 +71,11 @@ const Navbar2 = (props) => {
                 <div className={`absolute md:hidden top-9 mt-0.5 left-0 transition-all duration-500 ease-in-out h-full rounded-b-2xl flex bg-zinc-900/10 block w-full`}>
                     <div className={`flex flex-col p-2 items-start w-1/2 left-0 absolute h-full backdrop-blur-lg bg-${props.Background}/70 overflow-y-scroll h-full transition-all duration-500 ease-in-out`}>
 
-                        <img src={image1} alt="" className='w-full h-auto' />
+                        <a href="/"><img src={image1} alt="" className='w-full h-auto' /></a>
                         <button className={`text-md font-semibold m-2 text-${props.Text} tracking-wide font-navbar flex justify-between w-11/12`} onClick={() => { handleHover('Men') }} >Men {hoverState.Men ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />} </button>
                         {hoverState.Men && (
                             <div className='w-11/12 ps-3 '>
-                                <button className={`text-md font-medium m-3 text-${props.Text} tracking-wide font-navbar flex justify-between w-full`} onClick={() => { handleHover('Menstopwear') }}>Top Wear {hoverState.Menstopwear ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
+                                <button className={`text-md font-medium m-3 text-${props.Text} tracking-wide text-start font-navbar flex justify-between w-full`} onClick={() => { handleHover('Menstopwear') }}>Top Wear {hoverState.Menstopwear ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
                                 {hoverState.Menstopwear && (
                                     <div className='flex flex-col ps-3'>
                                         <a href="/" className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>T-shirts</a>
@@ -90,7 +90,7 @@ const Navbar2 = (props) => {
                                     </div>
                                 )
                                 }
-                                <button href='/' className={`text-md font-medium  m-3 text-${props.Text} tracking-wide font-desc flex justify-between w-full`} onClick={() => { handleHover('MIFWear') }}>Indian & Festive Wear {hoverState.MIFWear ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
+                                <button href='/' className={`text-md font-medium  m-3 text-${props.Text} text-start tracking-wide font-desc flex justify-between w-full`} onClick={() => { handleHover('MIFWear') }}>Indian & Festive Wear {hoverState.MIFWear ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
                                 {hoverState.MIFWear && (
                                     <div className='flex flex-col ps-3'>
                                         <a href="/" className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Kurtas & Kurta Sets</a>
@@ -99,7 +99,7 @@ const Navbar2 = (props) => {
                                         <a href="/" className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Dhotis</a>
                                     </div>
                                 )}
-                                <button href='/' className={`text-md font-medium  m-3 text-${props.Text} tracking-wide font-desc flex justify-between w-full`} onClick={() => { handleHover('MBWear') }}>Bottom Wear {hoverState.MBWear ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
+                                <button href='/' className={`text-md font-medium  m-3 text-${props.Text} text-start tracking-wide font-desc flex justify-between w-full`} onClick={() => { handleHover('MBWear') }}>Bottom Wear {hoverState.MBWear ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
                                 {hoverState.MBWear && (
                                     <div className='flex flex-col ps-3'>
                                         <a href="/" className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Jeans</a>
@@ -109,7 +109,7 @@ const Navbar2 = (props) => {
                                         <a href='/' className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Track Pants & Joggers</a>
                                     </div>
                                 )}
-                                <button href='/' className={`text-md font-medium  m-3 text-${props.Text} tracking-wide font-desc text-start flex justify-between w-full`} onClick={() => { handleHover('MISWear') }}>Innerwear & Sleep Wear {hoverState.MISWear ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
+                                <button href='/' className={`text-md font-medium  m-3 text-${props.Text} text-start tracking-wide font-desc flex justify-between w-full`} onClick={() => { handleHover('MISWear') }}>Innerwear & Sleep Wear {hoverState.MISWear ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
                                 {hoverState.MISWear && (
                                     <div className='flex flex-col ps-3'>
                                         <a href="/" className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Briefs & Trunks</a>
@@ -119,7 +119,7 @@ const Navbar2 = (props) => {
                                         <a href='/' className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Plus Size</a>
                                     </div>
                                 )}
-                                <button href='/' className={`text-md font-medium  m-3 text-${props.Text} tracking-wide font-desc flex justify-between w-full`} onClick={() => { handleHover('MFWear') }} >Foot Wear {hoverState.MFWear ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
+                                <button href='/' className={`text-md font-medium  m-3 text-${props.Text}  text-start tracking-wide font-desc flex justify-between w-full`} onClick={() => { handleHover('MFWear') }} >Foot Wear {hoverState.MFWear ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
                                 {hoverState.MFWear && (
                                     <div className='flex flex-col ps-3'>
                                         <a href='/' className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Casual Shoes</a>
@@ -131,14 +131,14 @@ const Navbar2 = (props) => {
                                         <a href='/' className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Socks</a>
                                     </div>
                                 )}
-                                <button href='/' className={`text-md font-medium m-3 text-${props.Text} tracking-wide text-start font-desc flex  w-full justify-between`} onClick={() => { handleHover('MPCGrooming') }}>Personal Care & Grooming {hoverState.MPCGrooming ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
+                                <button href='/' className={`text-md font-medium m-3 text-${props.Text} text-start tracking-wide font-desc flex  w-full justify-between`} onClick={() => { handleHover('MPCGrooming') }}>Personal Care & Grooming {hoverState.MPCGrooming ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
                                 {hoverState.MPCGrooming && (
                                     <div className='flex flex-col ps-3'>
                                         <a href='/' className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Sunglasses & Frames</a>
                                         <a href='/' className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Watches</a>
                                     </div>
                                 )}
-                                <button href='/' className={`text-md font-medium  m-3 text-${props.Text} tracking-wide font-desc flex justify-between w-full`} onClick={() => { handleHover('MSAWear') }}>Sports & Active Wear {hoverState.MSAWear ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
+                                <button href='/' className={`text-md font-medium  m-3 text-${props.Text} text-start tracking-wide font-desc flex justify-between w-full`} onClick={() => { handleHover('MSAWear') }}>Sports & Active Wear {hoverState.MSAWear ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
                                 {hoverState.MSAWear && (
                                     <div className='flex flex-col ps-3'>
                                         <a href="/" className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Sports Shoes</a>
@@ -151,7 +151,7 @@ const Navbar2 = (props) => {
                                         <a href="/" className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Swimwear</a>
                                     </div>
                                 )}
-                                <button href='/' className={`text-md font-medium  m-3 text-${props.Text} tracking-wide font-desc flex justify-between w-full`} onClick={() => { handleHover('MGadgets') }}>Gadgets {hoverState.MGadgets ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
+                                <button href='/' className={`text-md font-medium  m-3 text-${props.Text} text-start tracking-wide font-desc flex justify-between w-full`} onClick={() => { handleHover('MGadgets') }}>Gadgets {hoverState.MGadgets ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
                                 {hoverState.MGadgets && (
                                     <div className='flex flex-col ps-3'>
                                         <a href="/" className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Smart Wearables</a>
@@ -160,7 +160,7 @@ const Navbar2 = (props) => {
                                         <a href="/" className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Speakers</a>
                                     </div>
                                 )}
-                                <button href='/' className={`text-md font-medium  m-3 text-${props.Text} tracking-wide font-desc flex justify-between w-full`} onClick={() => { handleHover('MFAccessories') }}>Fashion Accessories {hoverState.MFAccessories ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
+                                <button href='/' className={`text-md font-medium  m-3 text-${props.Text} text-start tracking-wide font-desc flex justify-between w-full`} onClick={() => { handleHover('MFAccessories') }}>Fashion Accessories {hoverState.MFAccessories ? <RightArrow className='w-5 h-auto rotate-90 transition duration-200' /> : <RightArrow className='w-5 h-auto transition duration-200' />}</button>
                                 {hoverState.MFAccessories && (
                                     <div className='flex flex-col ps-3'>
                                         <a href="/" className={`text-md font-light m-2 text-${props.Text} tracking-wide hover:font-bold font-desc`}>Wallets</a>
