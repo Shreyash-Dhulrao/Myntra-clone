@@ -2,6 +2,7 @@ import React from 'react'
 import './Style.css'
 import icon from '../Images/Logos/Myntra.png'
 import imageIcon from '../Images/Image 1.png'
+import newImg from '../Images/Icons/new.png'
 import { useState } from 'react'
 import { ReactComponent as Profile } from '../Images/Icons/profile-svgrepo-com.svg'
 import { ReactComponent as Heart } from '../Images/Icons/heart-angle-svgrepo-com.svg'
@@ -19,7 +20,8 @@ const Navbar = (props) => {
         Kids: false,
         Home: false,
         Beauty: false,
-        Studio: false
+        Studio: false,
+        Profile: false,
     });
     
     const handleHover = (category, state) => {
@@ -601,10 +603,33 @@ const Navbar = (props) => {
                         <input type="text" name="Searchbar" id="searchicon1" placeholder='Search for products, brands and more' className={`ps-5 top-20 mt-3 py-3 w-1/2 right-0 absolute bg-${props.Light1} text-${props.Text} rounded-md font-extralight outline-none border-1 font-navbar tracking-wider text-sm`} />
                     </div>
                     <div className="profile  items-center ms-8 flex gap-4">
-                        <a href="/" className={`font-medium text-${props.Text}  items-center flex flex-col text-sm font-navbar tracking-wide`}>
+                        <a href="/" className={`font-medium text-${props.Text}  items-center flex flex-col text-sm font-navbar tracking-wide`} onMouseEnter={() => handleHover('Profile', true)} onMouseLeave={() => handleHover('Profile', false)}>
                             <Profile className={`text-${props.Text} w-6 h-auto`} />
                             Profile
                         </a>
+                        {hoverState.Profile && (
+                            <div className={`absolute  top-20 right-10 mt-1 transition backdrop-blur-lg rounded-b-2xl bg-${props.Background}/70 flex bg-zinc-200 ease-in-out block w-1/5`} onMouseEnter={() => handleHover('Profile', true)} onMouseLeave={() => handleHover('Profile', false)}>
+                                <div className="container1 flex flex-col p-4 px-5 ">
+                                    <div className={`flex flex-col gap-1 border-${props.Text}  pb-1`}>
+                                        <h3 className={`text-sm font-semibold text-${props.Text} tracking-wide hover:font-bold font-navbar`}>Welcome</h3>
+                                        <p className={`text-xs font-normal text-${props.Text}  tracking-wide hover:font-bold font-desc`}>To access account and manage orders</p>
+                                        <a href='/' className='text-pink-500 text-xs font-bold border rounded border-pink-500 p-2 w-fit'>LOGIN / SIGNUP</a>
+                                        <div className={`text-sm font-normal text-${props.Text} tracking-wide hover:font-bold font-desc flex flex-col border-t gap-y-1 py-2 my-2 border-b border-${props.Text}`}>
+                                        <a href="/" className={`text-sm font-normal text-${props.Text} tracking-wide hover:font-bold`}>Orders</a>
+                                        <a href="/" className={`text-sm font-normal text-${props.Text} tracking-wide hover:font-bold`}>Wishlist</a>
+                                        <a href="/" className={`text-sm font-normal text-${props.Text} tracking-wide hover:font-bold`}>Gift Cards</a>
+                                        <a href="/" className={`text-sm font-normal text-${props.Text} tracking-wide hover:font-bold`}>Contact us</a>
+                                        <a href="/" className={`text-sm font-normal text-${props.Text} tracking-wide hover:font-bold flex items-center`}>Myntra Insider <img src={newImg} alt="" className='w-7 h-auto'/></a>
+                                        </div>
+                                        <div className={`text-sm font-light text-${props.Text} tracking-wide hover:font-bold font-desc flex flex-col gap-y-1`}>
+                                        <a href="/" className={`text-sm font-normal text-${props.Text} tracking-wide hover:font-bold`}>Myntra Credits</a>
+                                        <a href="/" className={`text-sm font-normal text-${props.Text} tracking-wide hover:font-bold`}>Coupons</a>
+                                        <a href="/" className={`text-sm font-normal text-${props.Text} tracking-wide hover:font-bold`}>Saved Cards</a>
+                                        <a href="/" className={`text-sm font-normal text-${props.Text} tracking-wide hover:font-bold`}>Saved VPA</a>
+                                        <a href="/" className={`text-sm font-normal text-${props.Text} tracking-wide hover:font-bold`}>Saved Addresses</a>
+                                        </div>
+                                        </div>
+                                </div></div>)}
                         <a href="/" className={`font-medium text-${props.Text}  items-center flex flex-col text-sm font-navbar tracking-wide`}>
                             <Heart alt="/" className={`text-${props.Text} w-6 h-auto`} />
                             Wishlist

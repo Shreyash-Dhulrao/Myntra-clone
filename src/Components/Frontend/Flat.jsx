@@ -31,15 +31,14 @@ const SideTray = () => {
                             </div>
                             <img src={image1} alt="" width='150px' className='me-10' />
                         </div>
-                        <div className="container2 flex items-center justify-around my-3 text-sm ">
+                        <div className="container2 flex items-center pb-1 justify-around my-3 text-sm ">
                             <div>
                                 <p>Coupon Code : MYNTRA500</p>
                                 <p>Applicable on your first order</p>
                             </div>
                             <a href='/' className='bg-red-400 text-white p-3 rounded-lg text-sm font-bold'>SIGN UP NOW {`>`}</a>
                         </div>
-                        <div className='py-0.5 rounded-lg bg-black opacity-70' ></div>
-                        <div className="container3 flex gap-5 my-3 text-sm">
+                        <div className="container3 flex gap-5 my-3 text-sm border-t border-black pt-3">
                             <div className='flex gap-3 items-center'>
                                 <img src={verified} alt="" className='w-auto h-5 ' />
                                 <p>Geniune Products</p>
